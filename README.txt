@@ -50,7 +50,7 @@ CSV IMPORT
 - Two sample import templates are included in this ZIP.
 
 
-V5 CHANGES
+V10 CHANGES
 - Player names are filtered to players who have data in the selected season.
 - Match History now has its Season and Player filters in the Match History heading.
 - Betterball has a Season filter in the Betterball heading.

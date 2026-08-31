@@ -1,4 +1,4 @@
-const STORAGE_KEY = 'golfSeasonTrackerV8';
+const STORAGE_KEY = 'golfSeasonTrackerV10';
 
 const initialData = {"players":["Hein","Gersh","Louis","Anrich","Danie","John","Barry","Dewald D","Kevin","Faf","Marius","Paul","Hilmi","Matthew","Ronnie","Hanre","Gerhard","Matt"],"courses":["Kuilsrivier","Metropolitan","Milnerton","Devonvale","King David GC","Langebaan","Strand","Stellenbosch","Rondebosch","Bellville","Clovelly","Malmesbury"],"oppositions":["Covid","Rough Riders","Super 6","Titans","Legal Mulligans","JAGG","Black Knights","Ringers","Jacques","Kruger","Misfits","Langebaan","R/W","Booya","Mixed Teams"],"matches":[{"season":2026,"course":"Kuilsrivier","date":"2026-01-25","opposition":"Covid","player":"Hein","points":32,"type":"BB","result":"W","cart":"Y"},{"season":2026,"course":"Metropolitan","date":"2026-09-20","opposition":"Legal Mulligans","player":"Hein","points":24,"type":"BB","result":"W","cart":"Y"},{"season":2026,"course":"Milnerton","date":"2026-03-22","opposition":"Super 6","player":"Hein","points":27,"type":"BB","result":"L","cart":"N"},{"season":2026,"course":"Devonvale","date":"2026-04-12","opposition":"Titans","player":"Hein","points":26,"type":"BB","result":"L","cart":"Y"},{"season":2026,"course":"King David GC","date":"2026-05-31","opposition":"Legal Mulligans","player":"Hein","points":26,"type":"BB","result":"L","cart":"Y"},{"season":2026,"course":"Kuilsrivier","date":"2026-01-25","opposition":"Covid","player":"Gersh","points":28,"type":"BB","result":"W","cart":"Y"},{"season":2026,"course":"Metropolitan","date":"2026-09-20","opposition":"Legal Mulligans","player":"Gersh","points":31,"type":"S","result":"L","cart":"Y"},{"season":2026,"course":"Milnerton","date":"2026-03-22","opposition":"Super 6","player":"Gersh","points":28,"type":"S","result":"L","cart":"Y"},{"season":2026,"course":"Devonvale","date":"2026-04-12","opposition":"Titans","player":"Gersh","points":27,"type":"BB","result":"D","cart":"Y"},{"season":2026,"course":"King David GC","date":"2026-05-31","opposition":"Legal Mulligans","player":"Gersh","points":19,"type":"BB","result":"L","cart":"Y"},{"season":2026,"course":"Langebaan","date":"2026-07-26","opposition":"Rough Riders","player":"Gersh","points":29,"type":"BB","result":"D","cart":"N"},{"season":2026,"course":"Strand","date":"2026-08-30","opposition":"Covid","player":"Gersh","points":31,"type":"S","result":"L","cart":"Y"},{"season":2026,"course":"Kuilsrivier","date":"2026-01-25","opposition":"Covid","player":"Louis","points":24,"type":"S","result":"L","cart":"N"},{"season":2026,"course":"Metropolitan","date":"2026-09-20","opposition":"Legal Mulligans","player":"Louis","points":31,"type":"S","result":"L","cart":"Y"},{"season":2026,"course":"Milnerton","date":"2026-03-22","opposition":"Super 6","player":"Louis","points":36,"type":"S","result":"W","cart":"Y"},{"season":2026,"course":"Devonvale","date":"2026-04-12","opposition":"Titans","player":"Louis","points":31,"type":"S","result":"L","cart":"N"},{"season":2026,"course":"King David GC","date":"2026-05-31","opposition":"Legal Mulligans","player":"Louis","points":34,"type":"S","result":"W","cart":"N"},{"season":2026,"course":"Langebaan","date":"2026-07-26","opposition":"Rough Riders","player":"Louis","points":30,"type":"S","result":"L","cart":"N"},{"season":2026,"course":"Strand","date":"2026-08-30","opposition":"Covid","player":"Louis","points":31,"type":"S","result":"L","cart":"Y"},{"season":2026,"course":"Kuilsrivier","date":"2026-01-25","opposition":"Covid","player":"Anrich","points":27,"type":"S","result":"L","cart":"N"},{"season":2026,"course":"Metropolitan","date":"2026-09-20","opposition":"Legal Mulligans","player":"Anrich","points":38,"type":"BB","result":"W","cart":"N"},{"season":2026,"course":"Milnerton","date":"2026-03-22","opposition":"Super 6","player":"Anrich","points":27,"type":"BB","result":"L","cart":"N"},{"season":2026,"course":"Devonvale","date":"2026-04-12","opposition":"Titans","player":"Anrich","points":29,"type":"S","result":"L","cart":"N"},{"season":2026,"course":"King David GC","date":"2026-05-31","opposition":"Legal Mulligans","player":"Anrich","points":30,"type":"BB","result":"L","cart":"N"},{"season":2026,"course":"Langebaan","date":"2026-07-26","opposition":"Rough Riders","player":"Anrich","points":41,"type":"BB","result":"W","cart":"N"},{"season":2026,"course":"Strand","date":"2026-08-30","opposition":"Covid","player":"Anrich","points":35,"type":"BB","result":"W","cart":"N"},{"season":2026,"course":"Kuilsrivier","date":"2026-01-25","opposition":"Covid","player":"Danie","points":18,"type":"BB","result":"L","cart":"N"},{"season":2026,"course":"Metropolitan","date":"2026-09-20","opposition":"Legal Mulligans","player":"Danie","points":33,"type":"BB","result":"W","cart":"N"},{"season":2026,"course":"King David GC","date":"2026-05-31","opposition":"Legal Mulligans","player":"Danie","points":31,"type":"BB","result":"L","cart":"N"},{"season":2026,"course":"Langebaan","date":"2026-07-26","opposition":"Rough Riders","player":"Danie","points":30,"type":"BB","result":"W","cart":"N"},{"season":2026,"course":"Strand","date":"2026-08-30","opposition":"Covid","player":"Danie","points":23,"type":"BB","result":"L","cart":"N"},{"season":2026,"course":"Kuilsrivier","date":"2026-01-25","opposition":"Covid","player":"John","points":26,"type":"BB","result":"L","cart":"N"},{"season":2026,"course":"Metropolitan","date":"2026-09-20","opposition":"Legal Mulligans","player":"John","points":28,"type":"BB","result":"W","cart":"Y"},{"season":2026,"course":"Milnerton","date":"2026-03-22","opposition":"Super 6","player":"John","points":20,"type":"BB","result":"L","cart":"Y"},{"season":2026,"course":"Devonvale","date":"2026-04-12","opposition":"Titans","player":"John","points":24,"type":"BB","result":"D","cart":"Y"},{"season":2026,"course":"King David GC","date":"2026-05-31","opposition":"Legal Mulligans","player":"John","points":35,"type":"S","result":"W","cart":"N"},{"season":2026,"course":"Strand","date":"2026-08-30","opposition":"Covid","player":"John","points":28,"type":"BB","result":"L","cart":"N"},{"season":2026,"course":"Milnerton","date":"2026-03-22","opposition":"Super 6","player":"Barry","points":24,"type":"BB","result":"L","cart":"Y"},{"season":2026,"course":"Langebaan","date":"2026-07-26","opposition":"Rough Riders","player":"Dewald D","points":38,"type":"BB","result":"D","cart":"N"},{"season":2026,"course":"Langebaan","date":"2026-07-26","opposition":"Rough Riders","player":"Kevin","points":34,"type":"S","result":"W","cart":"N"},{"season":2026,"course":"Strand","date":"2026-08-30","opposition":"Covid","player":"Faf","points":27,"type":"BB","result":"WL","cart":"N"},{"season":2026,"course":"Devonvale","date":"2026-04-12","opposition":"Titans","player":"Marius","points":21,"type":"BB","result":"L","cart":"Y"},{"season":2025,"course":"Metropolitan","date":"2025-01-26","opposition":"Covid","player":"Hein","points":35,"type":"S","result":"L","cart":"Y"},{"season":2025,"course":"Kuilsrivier","date":"2025-02-23","opposition":"JAGG","player":"Hein","points":24,"type":"S","result":"L","cart":"Y"},{"season":2025,"course":"Devonvale","date":"2025-04-13","opposition":"Super 6","player":"Hein","points":27,"type":"BB","result":"L","cart":"Y"},{"season":2025,"course":"Strand","date":"2025-06-01","opposition":"Black Knights","player":"Hein","points":26,"type":"BB","result":"L","cart":"Y"},{"season":2025,"course":"Metropolitan","date":"2025-06-29","opposition":"Covid","player":"Hein","points":33,"type":"BB","result":"W","cart":"N"},{"season":2025,"course":"Milnerton","date":"2025-07-27","opposition":"JAGG","player":"Hein","points":28,"type":"BB","result":"W","cart":"Y"},{"season":2025,"course":"Bellville","date":"2025-09-28","opposition":"Black Knights","player":"Hein","points":35,"type":"BB","result":"W","cart":"Y"},{"season":2025,"course":"Stellenbosch","date":"2025-10-12","opposition":"Super 6","player":"Hein","points":35,"type":"BB","result":"W","cart":"N"},{"season":2025,"course":"Rondebosch","date":"2025-11-30","opposition":"Titans","player":"Hein","points":27,"type":"BB","result":"L","cart":"Y"},{"season":2025,"course":"Metropolitan","date":"2025-01-26","opposition":"Covid","player":"Louis","points":34,"type":"BB","result":"L","cart":"N"},{"season":2025,"course":"Kuilsrivier","date":"2025-02-23","opposition":"JAGG","player":"Louis","points":31,"type":"S","result":"L","cart":"Y"},{"season":2025,"course":"Devonvale","date":"2025-04-13","opposition":"Super 6","player":"Louis","points":27,"type":"S","result":"W","cart":"N"},{"season":2025,"course":"Langebaan","date":"2025-05-25","opposition":"Titans","player":"Louis","points":34,"type":"BB","result":"W","cart":"Y"},{"season":2025,"course":"Strand","date":"2025-06-01","opposition":"Black Knights","player":"Louis","points":36,"type":"BB","result":"W","cart":"Y"},{"season":2025,"course":"Milnerton","date":"2025-07-27","opposition":"JAGG","player":"Louis","points":33,"type":"S","result":"W","cart":"N"},{"season":2025,"course":"Bellville","date":"2025-09-28","opposition":"Black Knights","player":"Louis","points":38,"type":"BB","result":"W","cart":"Y"},{"season":2025,"course":"Stellenbosch","date":"2025-10-12","opposition":"Super 6","player":"Louis","points":41,"type":"BB","result":"W","cart":"N"},{"season":2025,"course":"Rondebosch","date":"2025-11-30","opposition":"Titans","player":"Louis","points":36,"type":"S","result":"W","cart":"N"},{"season":2025,"course":"Metropolitan","date":"2025-01-26","opposition":"Covid","player":"Gersh","points":36,"type":"BB","result":"W","cart":"Y"},{"season":2025,"course":"Kuilsrivier","date":"2025-02-23","opposition":"JAGG","player":"Gersh","points":32,"type":"BB","result":"W","cart":"Y"},{"season":2025,"course":"Langebaan","date":"2025-05-25","opposition":"Titans","player":"Gersh","points":36,"type":"BB","result":"W","cart":"Y"},{"season":2025,"course":"Strand","date":"2025-06-01","opposition":"Black Knights","player":"Gersh","points":34,"type":"BB","result":"W","cart":"Y"},{"season":2025,"course":"Metropolitan","date":"2025-06-29","opposition":"Covid","player":"Gersh","points":28,"type":"BB","result":"L","cart":"N"},{"season":2025,"course":"Milnerton","date":"2025-07-27","opposition":"JAGG","player":"Gersh","points":32,"type":"BB","result":"W","cart":"Y"},{"season":2025,"course":"Bellville","date":"2025-09-28","opposition":"Black Knights","player":"Gersh","points":26,"type":"S","result":"W","cart":"Y"},{"season":2025,"course":"Stellenbosch","date":"2025-10-12","opposition":"Super 6","player":"Gersh","points":36,"type":"S","result":"W","cart":"N"},{"season":2025,"course":"Rondebosch","date":"2025-11-30","opposition":"Titans","player":"Gersh","points":25,"type":"BB","result":"L","cart":"Y"},{"season":2025,"course":"Metropolitan","date":"2025-01-26","opposition":"Covid","player":"Danie","points":30,"type":"BB","result":"W","cart":"Y"},{"season":2025,"course":"Kuilsrivier","date":"2025-02-23","opposition":"JAGG","player":"Danie","points":31,"type":"BB","result":"W","cart":"Y"},{"season":2025,"course":"Devonvale","date":"2025-04-13","opposition":"Super 6","player":"Danie","points":28,"type":"BB","result":"W","cart":"N"},{"season":2025,"course":"Langebaan","date":"2025-05-25","opposition":"Titans","player":"Danie","points":34,"type":"BB","result":"W","cart":"N"},{"season":2025,"course":"Strand","date":"2025-06-01","opposition":"Black Knights","player":"Danie","points":20,"type":"S","result":"L","cart":"N"},{"season":2025,"course":"Metropolitan","date":"2025-06-29","opposition":"Covid","player":"Danie","points":32,"type":"BB","result":"W","cart":"N"},{"season":2025,"course":"Milnerton","date":"2025-07-27","opposition":"JAGG","player":"Danie","points":32,"type":"BB","result":"W","cart":"N"},{"season":2025,"course":"Bellville","date":"2025-09-28","opposition":"Black Knights","player":"Danie","points":26,"type":"S","result":"L","cart":"Y"},{"season":2025,"course":"Stellenbosch","date":"2025-10-12","opposition":"Super 6","player":"Danie","points":29,"type":"BB","result":"W","cart":"N"},{"season":2025,"course":"Rondebosch","date":"2025-11-30","opposition":"Titans","player":"Danie","points":33,"type":"BB","result":"W","cart":"N"},{"season":2025,"course":"Metropolitan","date":"2025-01-26","opposition":"Covid","player":"Anrich","points":33,"type":"BB","result":"L","cart":"N"},{"season":2025,"course":"Kuilsrivier","date":"2025-02-23","opposition":"JAGG","player":"Anrich","points":33,"type":"BB","result":"W","cart":"Y"},{"season":2025,"course":"Devonvale","date":"2025-04-13","opposition":"Super 6","player":"Anrich","points":35,"type":"BB","result":"W","cart":"N"},{"season":2025,"course":"Langebaan","date":"2025-05-25","opposition":"Titans","player":"Anrich","points":34,"type":"BB","result":"W","cart":"N"},{"season":2025,"course":"Strand","date":"2025-06-01","opposition":"Black Knights","player":"Anrich","points":28,"type":"BB","result":"L","cart":"N"},{"season":2025,"course":"Metropolitan","date":"2025-06-29","opposition":"Covid","player":"Anrich","points":30,"type":"S","result":"L","cart":"N"},{"season":2025,"course":"Milnerton","date":"2025-07-27","opposition":"JAGG","player":"Anrich","points":26,"type":"S","result":"L","cart":"N"},{"season":2025,"course":"Bellville","date":"2025-09-28","opposition":"Black Knights","player":"Anrich","points":23,"type":"BB","result":"L","cart":"Y"},{"season":2025,"course":"Stellenbosch","date":"2025-10-12","opposition":"Super 6","player":"Anrich","points":37,"type":"S","result":"W","cart":"N"},{"season":2025,"course":"Rondebosch","date":"2025-11-30","opposition":"Titans","player":"Anrich","points":34,"type":"BB","result":"W","cart":"N"},{"season":2025,"course":"Metropolitan","date":"2025-06-29","opposition":"Covid","player":"Paul","points":29,"type":"S","result":"W","cart":"N"},{"season":2025,"course":"Milnerton","date":"2025-07-27","opposition":"JAGG","player":"Paul","points":34,"type":"BB","result":"W","cart":"N"},{"season":2025,"course":"Bellville","date":"2025-09-28","opposition":"Black Knights","player":"Paul","points":27,"type":"BB","result":"L","cart":"Y"},{"season":2025,"course":"Metropolitan","date":"2025-01-26","opposition":"Covid","player":"Hilmi","points":36,"type":"S","result":"W","cart":"N"},{"season":2025,"course":"Kuilsrivier","date":"2025-02-23","opposition":"JAGG","player":"Marius","points":17,"type":"BB","result":"W","cart":"Y"},{"season":2025,"course":"Strand","date":"2025-06-01","opposition":"Black Knights","player":"Marius","points":6,"type":"S","result":"L","cart":"N"},{"season":2025,"course":"Metropolitan","date":"2025-06-29","opposition":"Covid","player":"Marius","points":24,"type":"BB","result":"L","cart":"N"},{"season":2025,"course":"Devonvale","date":"2025-04-13","opposition":"Super 6","player":"Matthew","points":21,"type":"BB","result":"L","cart":"Y"},{"season":2025,"course":"Devonvale","date":"2025-04-13","opposition":"Super 6","player":"Ronnie","points":33,"type":"S","result":"W","cart":"N"},{"season":2025,"course":"Langebaan","date":"2025-05-25","opposition":"Titans","player":"Kevin","points":32,"type":"S","result":"L","cart":"N"},{"season":2025,"course":"Langebaan","date":"2025-05-25","opposition":"Titans","player":"Hanre","points":23,"type":"S","result":"L","cart":"N"},{"season":2025,"course":"Stellenbosch","date":"2025-10-12","opposition":"Super 6","player":"Gerhard","points":21,"type":"BB","result":"W","cart":"N"},{"season":2025,"course":"Rondebosch","date":"2025-11-30","opposition":"Titans","player":"Gerhard","points":22,"type":"S","result":"L","cart":"N"},{"season":2024,"course":"Kuilsrivier","date":"2024-01-21","opposition":"Ringers","player":"Hein","points":29,"type":"BB","result":"D","cart":"N"},{"season":2024,"course":"Kuilsrivier","date":"2024-01-21","opposition":"Ringers","player":"Louis","points":26,"type":"S","result":"L","cart":"N"},{"season":2024,"course":"Kuilsrivier","date":"2024-01-21","opposition":"Ringers","player":"Gersh","points":29,"type":"S","result":"W","cart":"N"},{"season":2024,"course":"Kuilsrivier","date":"2024-01-21","opposition":"Ringers","player":"Matthew","points":29,"type":"BB","result":"D","cart":"N"},{"season":2024,"course":"Metropolitan","date":"2024-01-25","opposition":"Jacques","player":"Hein","points":28,"type":"BB","result":"L","cart":"N"},{"season":2024,"course":"Metropolitan","date":"2024-01-25","opposition":"Jacques","player":"Louis","points":36,"type":"S","result":"W","cart":"N"},{"season":2024,"course":"Metropolitan","date":"2024-01-25","opposition":"Jacques","player":"Gersh","points":35,"type":"S","result":"L","cart":"N"},{"season":2024,"course":"Metropolitan","date":"2024-01-25","opposition":"Jacques","player":"Matthew","points":26,"type":"BB","result":"L","cart":"N"},{"season":2024,"course":"Clovelly","date":"2024-04-14","opposition":"Kruger","player":"Hein","points":32,"type":"BB","result":"W","cart":"N"},{"season":2024,"course":"Clovelly","date":"2024-04-14","opposition":"Kruger","player":"Louis","points":32,"type":"S","result":"W","cart":"N"},{"season":2024,"course":"Clovelly","date":"2024-04-14","opposition":"Kruger","player":"Gersh","points":32,"type":"BB","result":"W","cart":"N"},{"season":2024,"course":"Clovelly","date":"2024-04-14","opposition":"Kruger","player":"Matthew","points":29,"type":"S","result":"L","cart":"N"},{"season":2024,"course":"Strand","date":"2024-05-26","opposition":"Misfits","player":"Hein","points":20,"type":"BB","result":"L","cart":"N"},{"season":2024,"course":"Strand","date":"2024-05-26","opposition":"Misfits","player":"Louis","points":30,"type":"S","result":"L","cart":"N"},{"season":2024,"course":"Strand","date":"2024-05-26","opposition":"Misfits","player":"Gersh","points":28,"type":"BB","result":"L","cart":"N"},{"season":2024,"course":"Strand","date":"2024-05-26","opposition":"Misfits","player":"Ronnie","points":28,"type":"S","result":"L","cart":"N"},{"season":2024,"course":"Malmesbury","date":"2024-06-23","opposition":"Langebaan","player":"Hein","points":27,"type":"BB","result":"W","cart":"N"},{"season":2024,"course":"Malmesbury","date":"2024-06-23","opposition":"Langebaan","player":"Louis","points":30,"type":"BB","result":"W","cart":"Y"},{"season":2024,"course":"Malmesbury","date":"2024-06-23","opposition":"Langebaan","player":"Gersh","points":28,"type":"S","result":"L","cart":"N"},{"season":2024,"course":"Malmesbury","date":"2024-06-23","opposition":"Langebaan","player":"Matthew","points":24,"type":"S","result":"L","cart":"N"},{"season":2024,"course":"Langebaan","date":"2024-07-28","opposition":"R/W","player":"Hein","points":39,"type":"S","result":"W","cart":"N"},{"season":2024,"course":"Langebaan","date":"2024-07-28","opposition":"R/W","player":"Louis","points":30,"type":"S","result":"L","cart":"N"},{"season":2024,"course":"Langebaan","date":"2024-07-28","opposition":"R/W","player":"Gersh","points":24,"type":"BB","result":"W","cart":"N"},{"season":2024,"course":"Langebaan","date":"2024-07-28","opposition":"R/W","player":"Matthew","points":30,"type":"BB","result":"W","cart":"N"},{"season":2024,"course":"Metropolitan","date":"2024-09-15","opposition":"Booya","player":"Hein","points":31,"type":"BB","result":"L","cart":"N"},{"season":2024,"course":"Metropolitan","date":"2024-09-15","opposition":"Booya","player":"Louis","points":32,"type":"S","result":"L","cart":"Y"},{"season":2024,"course":"Metropolitan","date":"2024-09-15","opposition":"Booya","player":"Gersh","points":34,"type":"S","result":"L","cart":"N"},{"season":2024,"course":"Metropolitan","date":"2024-09-15","opposition":"Booya","player":"Matthew","points":27,"type":"BB","result":"L","cart":"N"},{"season":2024,"course":"Stellenbosch","date":"2024-10-20","opposition":"Covid","player":"Hein","points":40,"type":"BB","result":"W","cart":"Y"},{"season":2024,"course":"Stellenbosch","date":"2024-10-20","opposition":"Covid","player":"Louis","points":35,"type":"S","result":"D","cart":"Y"},{"season":2024,"course":"Stellenbosch","date":"2024-10-20","opposition":"Covid","player":"Gersh","points":36,"type":"BB","result":"W","cart":"Y"},{"season":2024,"course":"Stellenbosch","date":"2024-10-20","opposition":"Covid","player":"Matthew","points":36,"type":"S","result":"L","cart":"Y"},{"season":2024,"course":"Rondebosch","date":"2024-11-10","opposition":"Mixed Teams","player":"Hein","points":38,"type":"","result":"","cart":"Y"},{"season":2024,"course":"Rondebosch","date":"2024-11-10","opposition":"Mixed Teams","player":"Louis","points":29,"type":"","result":"","cart":"Y"},{"season":2024,"course":"Rondebosch","date":"2024-11-10","opposition":"Mixed Teams","player":"Gersh","points":29,"type":"","result":"","cart":"Y"},{"season":2024,"course":"Rondebosch","date":"2024-11-10","opposition":"Mixed Teams","player":"Anrich","points":30,"type":"","result":"","cart":"Y"}],"betterball":[{"season":2026,"course":"Kuilsrivier","date":"2026-01-25","opposition":"Covid","t1p1":"Hein","t1p2":"Gersh","t1combined":38,"t1result":"W","t2p1":"Danie","t2p2":"John","t2combined":31,"t2result":"L"},{"season":2026,"course":"Metropolitan","date":"2026-09-20","opposition":"Legal Mulligans","t1p1":"Hein","t1p2":"John","t1combined":38,"t1result":"W","t2p1":"Danie","t2p2":"Anrich","t2combined":42,"t2result":"W"},{"season":2026,"course":"Milnerton","date":"2026-03-22","opposition":"Super 6","t1p1":"John","t1p2":"Barry","t1combined":31,"t1result":"L","t2p1":"Hein","t2p2":"Anrich","t2combined":36,"t2result":"L"},{"season":2026,"course":"Devonvale","date":"2026-04-12","opposition":"Titans","t1p1":"Gersh","t1p2":"John","t1combined":34,"t1result":"D","t2p1":"Hein","t2p2":"Marius","t2combined":32,"t2result":"L"},{"season":2026,"course":"King David GC","date":"2026-05-31","opposition":"Legal Mulligans","t1p1":"Hein","t1p2":"Gersh","t1combined":34,"t1result":"L","t2p1":"Danie","t2p2":"Anrich","t2combined":41,"t2result":"L"},{"season":2026,"course":"Langebaan","date":"2026-07-26","opposition":"Rough Riders","t1p1":"Danie","t1p2":"Anrich","t1combined":46,"t1result":"W","t2p1":"Gersh","t2p2":"Dewald D","t2combined":46,"t2result":"D"},{"season":2026,"course":"Strand","date":"2026-08-30","opposition":"Covid","t1p1":"Danie","t1p2":"John","t1combined":33,"t1result":"L","t2p1":"Anrich","t2p2":"Faf","t2combined":43,"t2result":"W"},{"season":2025,"course":"Metropolitan","date":"2025-01-26","opposition":"Covid","t1p1":"Danie","t1p2":"Gersh","t1combined":0,"t1result":"W","t2p1":"","t2p2":"","t2combined":0,"t2result":""},{"season":2025,"course":"Metropolitan","date":"2025-01-26","opposition":"Covid","t1p1":"Anrich","t1p2":"Louis","t1combined":0,"t1result":"L","t2p1":"","t2p2":"","t2combined":0,"t2result":""},{"season":2025,"course":"Kuilsrivier","date":"2025-02-23","opposition":"JAGG","t1p1":"Danie","t1p2":"Marius","t1combined":0,"t1result":"W","t2p1":"","t2p2":"","t2combined":0,"t2result":""},{"season":2025,"course":"Kuilsrivier","date":"2025-02-23","opposition":"JAGG","t1p1":"Gersh","t1p2":"Anrich","t1combined":0,"t1result":"W","t2p1":"","t2p2":"","t2combined":0,"t2result":""},{"season":2025,"course":"Devonvale","date":"2025-04-13","opposition":"Super 6","t1p1":"Hein","t1p2":"Matt","t1combined":0,"t1result":"L","t2p1":"","t2p2":"","t2combined":0,"t2result":""},{"season":2025,"course":"Devonvale","date":"2025-04-13","opposition":"Super 6","t1p1":"Danie","t1p2":"Anrich","t1combined":0,"t1result":"W","t2p1":"","t2p2":"","t2combined":0,"t2result":""},{"season":2025,"course":"Langebaan","date":"2025-05-25","opposition":"Titans","t1p1":"Gersh","t1p2":"Louis","t1combined":0,"t1result":"W","t2p1":"","t2p2":"","t2combined":0,"t2result":""},{"season":2025,"course":"Langebaan","date":"2025-05-25","opposition":"Titans","t1p1":"Anrich","t1p2":"Danie","t1combined":0,"t1result":"W","t2p1":"","t2p2":"","t2combined":0,"t2result":""},{"season":2025,"course":"Strand","date":"2025-06-01","opposition":"Black Knights","t1p1":"Gersh","t1p2":"Louis","t1combined":0,"t1result":"W","t2p1":"","t2p2":"","t2combined":0,"t2result":""},{"season":2025,"course":"Strand","date":"2025-06-01","opposition":"Black Knights","t1p1":"Anrich","t1p2":"Hein","t1combined":0,"t1result":"W","t2p1":"","t2p2":"","t2combined":0,"t2result":""},{"season":2025,"course":"Metropolitan","date":"2025-06-29","opposition":"Covid","t1p1":"Hein","t1p2":"Danie","t1combined":0,"t1result":"W","t2p1":"","t2p2":"","t2combined":0,"t2result":""},{"season":2025,"course":"Metropolitan","date":"2025-06-29","opposition":"Covid","t1p1":"Gersh","t1p2":"Marius","t1combined":0,"t1result":"L","t2p1":"","t2p2":"","t2combined":0,"t2result":""},{"season":2025,"course":"Milnerton","date":"2025-07-27","opposition":"JAGG","t1p1":"Gersh","t1p2":"Hein","t1combined":0,"t1result":"W","t2p1":"","t2p2":"","t2combined":0,"t2result":""},{"season":2025,"course":"Milnerton","date":"2025-07-27","opposition":"JAGG","t1p1":"Danie","t1p2":"Paul","t1combined":0,"t1result":"W","t2p1":"","t2p2":"","t2combined":0,"t2result":""},{"season":2025,"course":"Stellenbosch","date":"2025-10-12","opposition":"Super 6","t1p1":"Hein","t1p2":"Louis","t1combined":0,"t1result":"W","t2p1":"","t2p2":"","t2combined":0,"t2result":""},{"season":2025,"course":"Stellenbosch","date":"2025-10-12","opposition":"Super 6","t1p1":"Anrich","t1p2":"Paul","t1combined":0,"t1result":"L","t2p1":"","t2p2":"","t2combined":0,"t2result":""},{"season":2025,"course":"Rondebosch","date":"2025-11-30","opposition":"Titans","t1p1":"Anrich","t1p2":"Danie","t1combined":0,"t1result":"W","t2p1":"","t2p2":"","t2combined":0,"t2result":""},{"season":2025,"course":"Rondebosch","date":"2025-11-30","opposition":"Titans","t1p1":"Gersh","t1p2":"Hein","t1combined":0,"t1result":"L","t2p1":"","t2p2":"","t2combined":0,"t2result":""},{"season":2025,"course":"Rondebosch","date":"2025-11-30","opposition":"Titans","t1p1":"Louis","t1p2":"Gerhard","t1combined":0,"t1result":"W","t2p1":"","t2p2":"","t2combined":0,"t2result":""},{"season":2025,"course":"Rondebosch","date":"2025-11-30","opposition":"Titans","t1p1":"Hein","t1p2":"Danie","t1combined":0,"t1result":"W","t2p1":"","t2p2":"","t2combined":0,"t2result":""}]};
 
@@ -431,26 +431,48 @@ function parseCsv(text){
 function importCsv(text,mode='append'){
   const rows=parseCsv(text);
   if(rows.length<2) throw new Error('CSV has no data rows.');
+
   const norm=s=>String(s||'').trim().toLowerCase().replace(/[^a-z0-9]/g,'');
   const headers=rows[0].map(norm), idx={};
   headers.forEach((h,i)=>idx[h]=i);
+
   const get=(r,...names)=>{
-    for(const name of names){const k=norm(name);if(k in idx)return String(r[idx[k]]??'').trim();}
+    for(const name of names){
+      const k=norm(name);
+      if(k in idx) return String(r[idx[k]]??'').trim();
+    }
     return '';
   };
-  const importedMatches=[], importedBB=[];
-  for(const r of rows.slice(1)){
-    if(!r.some(v=>String(v).trim())) continue;
+
+  const importedMatches=[], importedBB=[], errors=[];
+  const validResult=new Set(['W','L','D','WL','']);
+  const validType=new Set(['S','BB','']);
+  const validCart=new Set(['Y','N','']);
+
+  rows.slice(1).forEach((r,rowIndex)=>{
+    if(!r.some(v=>String(v).trim())) return;
+
     let record=get(r,'RecordType','Record Type').toUpperCase();
     if(!record){
-      record=(get(r,'Team1Player1','Team 1 Player 1','T1P1')||get(r,'Team2Player1','Team 2 Player 1','T2P1'))?'BETTERBALL':'MATCH';
+      record=(get(r,'Team1Player1','Team 1 Player 1','T1P1')||get(r,'Team2Player1','Team 2 Player 1','T2P1'))?'BETTERBALL':'INDIVIDUAL';
     }
+
+    const season=Number(get(r,'Season','Year'));
+    const course=get(r,'Course','Golf Course');
+    const date=get(r,'Date','Match Date');
+    const opposition=get(r,'Opposition','Opponent');
+
+    if(!season || !course || !date){
+      errors.push(`Row ${rowIndex+2}: Season, Course and Date are required.`);
+      return;
+    }
+
     if(record==='BETTERBALL' || record==='BB'){
-      importedBB.push({
-        season:Number(get(r,'Season','Year'))||2026,
-        course:get(r,'Course','Golf Course'),
-        date:get(r,'Date','Match Date'),
-        opposition:get(r,'Opposition','Opponent'),
+      const item={
+        season,
+        course,
+        date,
+        opposition,
         t1p1:get(r,'Team1Player1','Team 1 Player 1','T1P1'),
         t1p2:get(r,'Team1Player2','Team 1 Player 2','T1P2'),
         t1combined:Number(get(r,'Team1Combined','Team 1 Combined','Team1 Score'))||0,
@@ -459,33 +481,93 @@ function importCsv(text,mode='append'){
         t2p2:get(r,'Team2Player2','Team 2 Player 2','T2P2'),
         t2combined:Number(get(r,'Team2Combined','Team 2 Combined','Team2 Score'))||0,
         t2result:get(r,'Team2Result','Team 2 Result','T2Result').toUpperCase()
-      });
+      };
+
+      if(!item.t1p1 || !item.t1p2){
+        errors.push(`Row ${rowIndex+2}: Betterball requires Team 1 Player 1 and Player 2.`);
+        return;
+      }
+      if(!validResult.has(item.t1result) || !validResult.has(item.t2result)){
+        errors.push(`Row ${rowIndex+2}: Betterball result must be W, L or D.`);
+        return;
+      }
+      importedBB.push(item);
     }else{
-      importedMatches.push({
-        season:Number(get(r,'Season','Year'))||2026,
-        course:get(r,'Course','Golf Course'),
-        date:get(r,'Date','Match Date'),
-        opposition:get(r,'Opposition','Opponent'),
+      const item={
+        season,
+        course,
+        date,
+        opposition,
         player:get(r,'Player','Player Name','Name'),
         points:Number(get(r,'Points','Pts','Stableford Points','Score'))||0,
-        type:(get(r,'Type','S/BB','Format')||'S').toUpperCase(),
+        type:(get(r,'Type','MatchType','Match Type','S/BB','Format')||'S').toUpperCase(),
         result:get(r,'Result','W/L/D','Outcome').toUpperCase(),
         cart:get(r,'Cart','Cart Y/N').toUpperCase()
-      });
+      };
+
+      if(!item.player){
+        errors.push(`Row ${rowIndex+2}: Player is required.`);
+        return;
+      }
+      if(!validType.has(item.type)){
+        errors.push(`Row ${rowIndex+2}: Match Type must be S or BB.`);
+        return;
+      }
+      if(!validResult.has(item.result)){
+        errors.push(`Row ${rowIndex+2}: Result must be W, L or D.`);
+        return;
+      }
+      if(!validCart.has(item.cart)){
+        errors.push(`Row ${rowIndex+2}: Cart must be Y or N.`);
+        return;
+      }
+      importedMatches.push(item);
     }
-  }
+  });
+
+  if(errors.length) throw new Error(errors.slice(0,8).join('\n')+(errors.length>8?`\n...and ${errors.length-8} more error(s).`:''));
   if(!importedMatches.length && !importedBB.length) throw new Error('No usable rows found.');
-  if(mode==='replace'){state.matches=[];state.betterball=[];}
-  state.matches.push(...importedMatches); state.betterball.push(...importedBB);
+
+  if(mode==='replace'){
+    state.matches=[];
+    state.betterball=[];
+  }
+
+  // Prevent exact duplicate imports in append mode.
+  const matchKey=x=>[x.season,x.course,x.date,x.opposition,x.player,x.points,x.type,x.result,x.cart].map(v=>String(v??'').trim().toLowerCase()).join('|');
+  const bbKey=x=>[x.season,x.course,x.date,x.opposition,x.t1p1,x.t1p2,x.t1combined,x.t1result,x.t2p1,x.t2p2,x.t2combined,x.t2result].map(v=>String(v??'').trim().toLowerCase()).join('|');
+
+  const existingMatches=new Set(state.matches.map(matchKey));
+  const existingBB=new Set(state.betterball.map(bbKey));
+  const addMatches=importedMatches.filter(x=>!existingMatches.has(matchKey(x)));
+  const addBB=importedBB.filter(x=>!existingBB.has(bbKey(x)));
+
+  state.matches.push(...addMatches);
+  state.betterball.push(...addBB);
 
   const addUnique=(arr,v)=>{
     v=String(v||'').trim();
     if(v && !arr.some(x=>String(x).toLowerCase()===v.toLowerCase())) arr.push(v);
   };
-  importedMatches.forEach(x=>{addUnique(state.players,x.player);addUnique(state.courses,x.course);addUnique(state.oppositions,x.opposition);});
-  importedBB.forEach(x=>{[x.t1p1,x.t1p2,x.t2p1,x.t2p2].forEach(v=>addUnique(state.players,v));addUnique(state.courses,x.course);addUnique(state.oppositions,x.opposition);});
-  saveState(); renderAll();
-  return {matches:importedMatches.length,betterball:importedBB.length};
+  addMatches.forEach(x=>{
+    addUnique(state.players,x.player);
+    addUnique(state.courses,x.course);
+    addUnique(state.oppositions,x.opposition);
+  });
+  addBB.forEach(x=>{
+    [x.t1p1,x.t1p2,x.t2p1,x.t2p2].forEach(v=>addUnique(state.players,v));
+    addUnique(state.courses,x.course);
+    addUnique(state.oppositions,x.opposition);
+  });
+
+  saveState();
+  renderAll();
+
+  return {
+    matches:addMatches.length,
+    betterball:addBB.length,
+    duplicates:(importedMatches.length-addMatches.length)+(importedBB.length-addBB.length)
+  };
 }
 
 
@@ -507,7 +589,7 @@ document.getElementById('importCsvInput').addEventListener('change',async e=>{
   try{
     const mode=document.getElementById('csvImportMode').value;
     const result=importCsv(await file.text(),mode);
-    alert(`CSV imported: ${result.matches} individual rows and ${result.betterball} Betterball rows.`);
+    alert(`Completed matches imported:\n${result.matches} Individual rows\n${result.betterball} Betterball rows\n${result.duplicates} duplicate row(s) skipped.`);
   }catch(err){
     alert('Could not import CSV: '+err.message);
   }
@@ -520,6 +602,20 @@ document.getElementById('resetBtn').addEventListener('click',()=>{
     state=structuredClone(initialData);saveState();renderAll();
   }
 });
+document.getElementById('downloadCompletedTemplateBtn').addEventListener('click',()=>{
+  const headers=['RecordType','Season','Course','Date','Opposition','Player','Points','MatchType','Result','Cart','Team1Player1','Team1Player2','Team1Combined','Team1Result','Team2Player1','Team2Player2','Team2Combined','Team2Result'];
+  const examples=[
+    ['Individual',2027,'Course Name','2027-01-24','Opposition','Player Name',32,'S','W','N','','','','','','','',''],
+    ['Betterball',2027,'Course Name','2027-01-24','Opposition','','','','','','Player 1','Player 2',40,'W','Player 3','Player 4',36,'L']
+  ];
+  const csv=[headers,...examples].map(r=>r.map(v=>`"${String(v??'').replace(/"/g,'""')}"`).join(',')).join('\n');
+  downloadText('CSV_Import_Template_Completed_Matches.csv',csv,'text/csv');
+});
+
+document.getElementById('exportGithubDataBtn').addEventListener('click',()=>{
+  downloadText('golf-data.json',JSON.stringify(state,null,2),'application/json');
+});
+
 document.getElementById('exportMatchesCsvBtn').addEventListener('click',()=>{
   const rows=[['Season','Course','Date','Opposition','Player','Points','Type','Result','Cart'],...state.matches.map(x=>[x.season,x.course,x.date,x.opposition,x.player,x.points,x.type,x.result,x.cart])];
   const csv=rows.map(r=>r.map(v=>`"${String(v??'').replace(/"/g,'""')}"`).join(',')).join('\n');

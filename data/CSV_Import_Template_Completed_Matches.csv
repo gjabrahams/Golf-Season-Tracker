@@ -1,0 +1,4 @@
+﻿RecordType,Season,Course,Date,Opposition,Player,Points,MatchType,Result,Cart,Team1Player1,Team1Player2,Team1Combined,Team1Result,Team2Player1,Team2Player2,Team2Combined,Team2Result
+Individual,2027,Course Name,2027-01-24,Opposition,Player Name,32,S,W,N,,,,,,,,
+Individual,2027,Course Name,2027-01-24,Opposition,Player Two,29,BB,L,Y,,,,,,,,
+Betterball,2027,Course Name,2027-01-24,Opposition,,,,,,Player Name,Player Two,41,W,Player Three,Player Four,37,L

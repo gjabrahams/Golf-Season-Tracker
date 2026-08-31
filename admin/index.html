@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Golf Season Tracker V8</title>
+  <title>Golf Season Tracker V10</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <div>
-      <h1>Golf Season Tracker</h1>
+      <h1>Golf Season Tracker V10</h1>
       <p>Offline multi-player singles & betterball tracker</p>
     </div>
     <div class="header-actions">
@@ -81,7 +81,20 @@
 
       <div class="section-head secondary">
         <h3>Match Data</h3>
-        <div class="header-actions"><button id="exportMatchesCsvBtn" class="secondary-btn">Export CSV</button><select id="csvImportMode"><option value="append">Append CSV</option><option value="replace">Replace with CSV</option></select><label class="file-btn">Import CSV<input id="importCsvInput" type="file" accept=".csv,text/csv" /></label></div>
+        <div class="header-actions">
+          <button id="downloadCompletedTemplateBtn" class="secondary-btn">Download Completed Match Template</button>
+          <button id="exportMatchesCsvBtn" class="secondary-btn">Export Individual CSV</button>
+          <button id="exportGithubDataBtn" class="secondary-btn">Download golf-data.json</button>
+          <select id="csvImportMode" title="Append keeps existing data; Replace clears existing match and Betterball results first.">
+            <option value="append">Append to Existing Data</option>
+            <option value="replace">Replace All Match Data</option>
+          </select>
+          <label class="file-btn">Import Completed Matches CSV<input id="importCsvInput" type="file" accept=".csv,text/csv" /></label>
+        </div>
+      </div>
+      <div class="note">
+        Import one CSV containing completed Individual and/or Betterball results. New players, courses and opponents are added automatically.
+        When finished, use <b>Download golf-data.json</b> and replace <code>data/golf-data.json</code> in GitHub to update the public site.
       </div>
       <div class="table-wrap">
         <table>
