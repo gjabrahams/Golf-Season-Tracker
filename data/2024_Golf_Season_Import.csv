@@ -1,0 +1,37 @@
+﻿RecordType,Season,Course,Date,Opposition,Player,Points,MatchType,Result,Cart
+Individual,2024,Kuilsrivier,2024-01-21,Ringers,Hein,29,BB,D,N
+Individual,2024,Kuilsrivier,2024-01-21,Ringers,Louis,26,S,L,N
+Individual,2024,Kuilsrivier,2024-01-21,Ringers,Gersh,29,S,W,N
+Individual,2024,Kuilsrivier,2024-01-21,Ringers,Matthew,29,BB,D,N
+Individual,2024,Metropolitan,2024-01-25,Jacques,Hein,28,BB,L,N
+Individual,2024,Metropolitan,2024-01-25,Jacques,Louis,36,S,W,N
+Individual,2024,Metropolitan,2024-01-25,Jacques,Gersh,35,S,L,N
+Individual,2024,Metropolitan,2024-01-25,Jacques,Matthew,26,BB,L,N
+Individual,2024,Clovelly,2024-04-14,Kruger,Hein,32,BB,W,N
+Individual,2024,Clovelly,2024-04-14,Kruger,Louis,32,S,W,N
+Individual,2024,Clovelly,2024-04-14,Kruger,Gersh,32,BB,W,N
+Individual,2024,Clovelly,2024-04-14,Kruger,Matthew,29,S,L,N
+Individual,2024,Strand,2024-05-26,Misfits,Hein,20,BB,L,N
+Individual,2024,Strand,2024-05-26,Misfits,Louis,30,S,L,N
+Individual,2024,Strand,2024-05-26,Misfits,Gersh,28,BB,L,N
+Individual,2024,Strand,2024-05-26,Misfits,Ronnie,28,S,L,N
+Individual,2024,Malmesbury,2024-06-23,Langebaan,Hein,27,BB,W,N
+Individual,2024,Malmesbury,2024-06-23,Langebaan,Louis,30,BB,W,Y
+Individual,2024,Malmesbury,2024-06-23,Langebaan,Gersh,28,S,L,N
+Individual,2024,Malmesbury,2024-06-23,Langebaan,Matthew,24,S,L,N
+Individual,2024,Langebaan,2024-07-28,R/W,Hein,39,S,W,N
+Individual,2024,Langebaan,2024-07-28,R/W,Louis,30,S,L,N
+Individual,2024,Langebaan,2024-07-28,R/W,Gersh,24,BB,W,N
+Individual,2024,Langebaan,2024-07-28,R/W,Matthew,30,BB,W,N
+Individual,2024,Metropolitan,2024-09-15,Booya,Hein,31,BB,L,N
+Individual,2024,Metropolitan,2024-09-15,Booya,Louis,32,S,L,Y
+Individual,2024,Metropolitan,2024-09-15,Booya,Gersh,34,S,L,N
+Individual,2024,Metropolitan,2024-09-15,Booya,Matthew,27,BB,L,N
+Individual,2024,Stellenbosch,2024-10-20,Covid,Hein,40,BB,W,Y
+Individual,2024,Stellenbosch,2024-10-20,Covid,Louis,35,S,D,Y
+Individual,2024,Stellenbosch,2024-10-20,Covid,Gersh,36,BB,W,Y
+Individual,2024,Stellenbosch,2024-10-20,Covid,Matthew,36,S,L,Y
+Individual,2024,Rondebosch,2024-11-10,Mixed Teams,Hein,38,,,Y
+Individual,2024,Rondebosch,2024-11-10,Mixed Teams,Louis,29,,,Y
+Individual,2024,Rondebosch,2024-11-10,Mixed Teams,Gersh,29,,,Y
+Individual,2024,Rondebosch,2024-11-10,Mixed Teams,Anrich,30,,,Y
