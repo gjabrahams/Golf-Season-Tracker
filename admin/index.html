@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Golf Season Tracker V6</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Golf Season Tracker</h1>
+      <p>Offline multi-player singles & betterball tracker</p>
+    </div>
+    <div class="header-actions">
+      <button id="createViewerBtn">Create Read-Only Viewer</button>
+      <button id="exportJsonBtn">Export Backup</button>
+      <label class="file-btn">
+        Import Backup
+        <input id="importJsonInput" type="file" accept=".json" />
+      </label>
+      <button id="resetBtn" class="danger">Reset Data</button>
+    </div>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab active" data-tab="dashboard">Dashboard</button>
+    <button class="tab" data-tab="matches">Individual Matches</button>
+    <button class="tab" data-tab="betterball">Betterball</button>
+    <button class="tab" data-tab="compare">3 Player Compare</button>
+    <button class="tab" data-tab="lists">Lists</button>
+  </nav>
+
+  <main>
+    <section id="dashboard" class="panel active-panel">
+      <div class="section-head"><h2>Player Dashboard</h2></div>
+      <div id="dashboardCards" class="cards"></div>
+
+      <div class="grid-two">
+        <div class="card">
+          <div class="section-head">
+            <h3>Match History</h3>
+            <div class="header-actions">
+              <label>Season <select id="dashboardSeason"></select></label>
+              <label>Player <select id="dashboardPlayer"></select></label>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>Course</th><th>Date</th><th>Opposition</th><th>Points</th><th>Type</th><th>Result</th><th>Cart</th></tr>
+              </thead>
+              <tbody id="dashboardHistory"></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Performance</h3>
+          <canvas id="dashboardChart" width="520" height="260"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <section id="matches" class="panel">
+      <div class="section-head">
+        <h2>Individual Match Entry</h2>
+        <button id="addMatchBtn">+ Add Match</button>
+      </div>
+
+      <div class="form-grid">
+        <label>Season<input id="mSeason" type="number" value="2026" /></label>
+        <label>Course<select id="mCourse"></select></label>
+        <label>Date<input id="mDate" type="date" /></label>
+        <label>Opposition<select id="mOpposition"></select></label>
+        <label>Player<select id="mPlayer"></select></label>
+        <label>Points<input id="mPoints" type="number" min="0" step="1" /></label>
+        <label>Type<select id="mType"><option value="S">Singles</option><option value="BB">Betterball</option></select></label>
+        <label>Result<select id="mResult"><option value="W">Win</option><option value="D">Draw</option><option value="L">Loss</option></select></label>
+        <label>Cart<select id="mCart"><option value="Y">Yes</option><option value="N">No</option></select></label>
+      </div>
+
+      <div class="section-head secondary">
+        <h3>Match Data</h3>
+        <div class="header-actions"><button id="exportMatchesCsvBtn" class="secondary-btn">Export CSV</button><select id="csvImportMode"><option value="append">Append CSV</option><option value="replace">Replace with CSV</option></select><label class="file-btn">Import CSV<input id="importCsvInput" type="file" accept=".csv,text/csv" /></label></div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Season</th><th>Course</th><th>Date</th><th>Opposition</th><th>Player</th><th>Points</th><th>Type</th><th>Result</th><th>Cart</th><th></th></tr>
+          </thead>
+          <tbody id="matchesBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="betterball" class="panel">
+      <div class="section-head">
+        <h2>Betterball</h2>
+        <div class="header-actions"><label>View Season <select id="betterballSeason"></select></label><button id="addBetterballBtn">+ Add Betterball Match</button></div>
+      </div>
+
+      <div class="form-grid bb-grid">
+        <label>Season<input id="bSeason" type="number" value="2026" /></label>
+        <label>Course<select id="bCourse"></select></label>
+        <label>Date<input id="bDate" type="date" /></label>
+        <label>Opposition<select id="bOpposition"></select></label>
+
+        <label>Team 1 Player 1<select id="bT1P1"></select></label>
+        <label>Team 1 Player 2<select id="bT1P2"></select></label>
+        <label>Team 1 Combined<input id="bT1Combined" type="number" min="0" /></label>
+        <label>Team 1 Result<select id="bT1Result"><option value="W">Win</option><option value="D">Draw</option><option value="L">Loss</option></select></label>
+
+        <label>Team 2 Player 1<select id="bT2P1"></select></label>
+        <label>Team 2 Player 2<select id="bT2P2"></select></label>
+        <label>Team 2 Combined<input id="bT2Combined" type="number" min="0" /></label>
+        <label>Team 2 Result<select id="bT2Result"><option value="L">Loss</option><option value="D">Draw</option><option value="W">Win</option></select></label>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Course</th><th>Date</th><th>Opposition</th>
+              <th>Team 1</th><th>Combined</th><th>Result</th>
+              <th>Team 2</th><th>Combined</th><th>Result</th><th></th>
+            </tr>
+          </thead>
+          <tbody id="betterballBody"></tbody>
+        </table>
+      </div>
+
+      <div class="card top-space">
+        <div class="section-head">
+          <h3>Betterball Team Summary</h3>
+        </div>
+        <div class="team-selectors">
+          <div>
+            <strong>Team A</strong>
+            <select id="sumA1"></select>
+            <select id="sumA2"></select>
+          </div>
+          <div>
+            <strong>Team B</strong>
+            <select id="sumB1"></select>
+            <select id="sumB2"></select>
+          </div>
+        </div>
+        <div id="teamSummary" class="cards"></div>
+      </div>
+    </section>
+
+    <section id="compare" class="panel">
+      <div class="section-head">
+        <h2>6 Player Comparison</h2>
+        <label>Season <select id="compareSeason"></select></label>
+      </div>
+      <div class="table-wrap">
+        <table class="compare-table">
+          <thead><tr><th>Metric</th><th><select id="cmp1" class="compare-head-select"></select></th><th><select id="cmp2" class="compare-head-select"></select></th><th><select id="cmp3" class="compare-head-select"></select></th><th><select id="cmp4" class="compare-head-select"></select></th><th><select id="cmp5" class="compare-head-select"></select></th><th><select id="cmp6" class="compare-head-select"></select></th></tr></thead>
+          <tbody id="compareBody"></tbody>
+        </table>
+      </div>
+      <div class="card top-space">
+        <h3>Comparison Chart</h3>
+        <canvas id="compareChart" width="760" height="320"></canvas>
+      </div>
+    </section>
+
+    <section id="lists" class="panel">
+      <div class="section-head">
+        <h2>Master Lists</h2>
+        <p class="muted">Add items here and all dropdowns update automatically.</p>
+      </div>
+      <div class="list-grid">
+        <div class="card">
+          <h3>Players</h3>
+          <div class="inline-add"><input id="newPlayer" placeholder="New player" /><button data-list-add="players">Add</button></div>
+          <div id="playersList" class="chips"></div>
+        </div>
+        <div class="card">
+          <h3>Courses</h3>
+          <div class="inline-add"><input id="newCourse" placeholder="New course" /><button data-list-add="courses">Add</button></div>
+          <div id="coursesList" class="chips"></div>
+        </div>
+        <div class="card">
+          <h3>Opposition</h3>
+          <div class="inline-add"><input id="newOpposition" placeholder="New opposition" /><button data-list-add="oppositions">Add</button></div>
+          <div id="oppositionsList" class="chips"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Offline data is saved in this browser on this device.</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
